@@ -123,6 +123,9 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
         rewardBtn.addEventListener('click', () => {
             overlay.style.display = 'block'
             betEl.style.pointerEvents = 'none'
+            overlayBtnContainer.addEventListener('click', () => {
+                overlay.style.display = 'none'
+            })
             // кнопка пропадает
             setTimeout(() => {
                 rewardBtn.style.display = 'none'
@@ -160,6 +163,7 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
       setTimeout(function () {
         restartGame()
         giveColourBtn()
+        betBtn.textContent = 'Играть заново'
       }, 1500)
     }
 
@@ -173,7 +177,7 @@ function cleanOverlay() {
     setTimeout(function() {
         overlay.style.display = 'none'
         betEl.style.pointerEvents = 'auto'
-    }, 2500)
+    }, 10000)
 }
 
 // функция возвращает вероятность
