@@ -121,7 +121,7 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
         rewardBtn.textContent = `Забрать ${reward}`
         // если забрал
         rewardBtn.addEventListener('click', () => {
-            overlay.style.width = '100%'
+            overlay.style.display = 'block'
             betEl.style.pointerEvents = 'none'
             // кнопка пропадает
             setTimeout(() => {
@@ -171,7 +171,7 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
 // удалениие оверлея через 2.5 сек
 function cleanOverlay() {
     setTimeout(function() {
-        overlay.style.width = '0'
+        overlay.style.display = 'none'
         betEl.style.pointerEvents = 'auto'
     }, 2500)
 }

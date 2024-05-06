@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    max-width: 1165px;
+    max-width: 1436px;
     margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@ body{
     display: flex;
     /* align-items: center; */
     background-color: #171717;
-    gap: 34px;
+    gap: 64px;
 }
 
 .bet{
@@ -85,14 +85,6 @@ body{
     border: 1px solid transparent;
 }
 
-.coin__img{
-    width: 60px;
-}
-
-.coin__text{
-    font-size: 14px;
-}
-
 .coin__btn.active{
     border: 1px solid #FF6E1C;
 }
@@ -123,7 +115,7 @@ body{
 
 .game{
     width: 857px;
-    padding: 38px 30px 38px 30px;
+    padding: 38px 50px 38px 60px;
     background-color: #1E1E1E;
 }
 
@@ -132,7 +124,7 @@ body{
 }
 
 .game__container{
-    width: 100%;
+    width: 743px;
     padding: 47px 141px 64px 0;
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     display: flex;
@@ -144,14 +136,16 @@ body{
 }
 
 .overlay{
+    display: none;
     height: 100%;
-    width: 0;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
     transition: 0.5s;
     overflow-x: hidden;
+    transition: 2s;
 }
 
 .overlay__content {
@@ -189,7 +183,7 @@ body{
 
 .count__rounds,
 .count__ratio{
-    padding: 20px 25px;
+    padding: 27px 33px;
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     border-radius: 10px;
 }
@@ -207,15 +201,15 @@ body{
 
 .count__rounds-text,
 .count__ratio-text{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 21px;
 }
 
 .coin{
     /* --depth: 7px; */
     position: relative;
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     transform-style: preserve-3d;
     transition: 2s;
     /* transform: rotateY(0deg); */
@@ -231,8 +225,8 @@ body{
 
 .view{
     /* --direction: 1; */
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     position: absolute;
     border-radius: 50%;
     transform: translateZ(7px);
@@ -256,6 +250,7 @@ body{
     background-image: url("./img/big-reshka.png");
     transform: rotateY(180deg);
 }
+
 
 @keyframes rotate-to-reshka {
     to{
