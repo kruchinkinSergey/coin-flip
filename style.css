@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    max-width: 1436px;
+    max-width: 1165px;
     margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@ body{
     display: flex;
     /* align-items: center; */
     background-color: #171717;
-    gap: 64px;
+    gap: 34px;
 }
 
 .bet{
@@ -85,6 +85,14 @@ body{
     border: 1px solid transparent;
 }
 
+.coin__img{
+    width: 60px;
+}
+
+.coin__text{
+    font-size: 14px;
+}
+
 .coin__btn.active{
     border: 1px solid #FF6E1C;
 }
@@ -115,7 +123,7 @@ body{
 
 .game{
     width: 857px;
-    padding: 38px 50px 38px 60px;
+    padding: 38px 30px 38px 30px;
     background-color: #1E1E1E;
 }
 
@@ -124,7 +132,7 @@ body{
 }
 
 .game__container{
-    width: 743px;
+    width: 100%;
     padding: 47px 141px 64px 0;
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     display: flex;
@@ -181,7 +189,7 @@ body{
 
 .count__rounds,
 .count__ratio{
-    padding: 27px 33px;
+    padding: 20px 25px;
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     border-radius: 10px;
 }
@@ -199,55 +207,65 @@ body{
 
 .count__rounds-text,
 .count__ratio-text{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 21px;
 }
 
 .coin{
+    /* --depth: 7px; */
     position: relative;
-    width: 250px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
     transform-style: preserve-3d;
-    /* animation: rotate 2s linear; */
-    /* animation-fill-mode: forwards; */
+    transition: 2s;
     /* transform: rotateY(0deg); */
 }
 
-.coin .view{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    pointer-events: none;
-    position: absolute;
-    border-radius: 7px;
-    backface-visibility: hidden;
+.rotateToReshka {
+    animation: rotate-to-reshka 1.5s ease-out forwards;
 }
 
-.coin .orel__view{
-    transform: rotateY(0deg);
+.rotateToOrel{
+    animation: rotate-to-orel 1.5s ease-out forwards;
 }
+
+.view{
+    /* --direction: 1; */
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateZ(7px);
+    background-image: url('./img/big-orel.png');
+    background-size: cover;
+}
+
+/* .coin .orel__view{
+    --direction: 1;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateZ(calc(var(--direction) * var(--depth)));
+    background-image: url(./img/big-orel.png);
+    background-size: cover;
+} */
   
-.coin .reshka__view{
-    transform: rotateY(-180deg);
+.reshka__view{
+    --direction: -1;
+    background-image: url("./img/big-reshka.png");
+    transform: rotateY(180deg);
 }
 
 @keyframes rotate-to-reshka {
-    0% {
-      transform: rotateY(0);
-    }
-    100% {
-      transform: rotateY(1980deg);
+    to{
+        transform: rotateY(1278deg);
     }
 }
 
 @keyframes rotate-to-orel {
-    0% {
-        trasnform: rotateY(0);
-    }
-    100% {
-        transform: rotateY(2160deg);
+    to{
+        transform: rotateY(1100deg);
     }
 }
 

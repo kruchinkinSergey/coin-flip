@@ -14,8 +14,8 @@ const orelView = document.querySelector('.orel__view')
 const reshkaView = document.querySelector('.reshka__view')
 
 let result;
-const orel = 'orel';
-const reshka = 'reshka';
+const orel = 'Orel';
+const reshka = 'Reshka';
 let isClick = false
 let notBetCoin;
 let cntRounds = 0;
@@ -61,10 +61,10 @@ coinBtnArr.forEach((coinBtn) => {
         // notBetCoin - оставшаяся сторона
         betCoin = coinBtn.value
 
-        if (betCoin === 'orel') {
-            notBetCoin = 'reshka'
+        if (betCoin === 'Orel') {
+            notBetCoin = 'Reshka'
         } else {
-            notBetCoin = 'orel'
+            notBetCoin = 'Orel'
         }
 
         isClick = true
@@ -86,20 +86,30 @@ betBtn.addEventListener('click', () => {
         giveColourBtn()
         // запускает анимацию
         rotateCoin(betCoin, notBetCoin, cntRounds)
+        
     }
 
 })
 
 function rotateCoin(betCoin, notBetCoin, cntRounds){
+
+    if (coinEl.classList.contains('rotateToReshka')) {
+        coinEl.classList.remove('rotateToReshka')
+    }
+
+    if (coinEl.classList.contains('rotateToOrel')) {
+        coinEl.classList.remove('rotateToOrel')
+    }
+
     let randomNum = Math.random();
-    coinEl.style.animation = 'none'
     // функция возвращает вероятность, передается кол-во раундов. Чем больше раундов, тем меньше вероятность
     const probability = getProbability(cntRounds)
     //(выигрыш) если выпало число меньше чем вероятность, то выпадет betCoin, т.е. сторона, на которую поставили
     if (randomNum < probability) {
         // анимация для выпавшей стороны через 0.1 секунд
       setTimeout(function () {
-        coinEl.style.animation = `rotate-to-${betCoin} 2s forwards`
+        // coinEl.style.animation = `rotate-to-${betCoin} 1.5s ease-out forwards`
+        coinEl.classList.add(`rotateTo${betCoin}`)
       }, 100)
       // результат выпадения через 2 секунды
       setTimeout(function () {
@@ -139,24 +149,24 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
         // в историю игр добавляется выпавшее изображение
         addHistoryImg(betCoin)
         giveColourBtn()
-      }, 2000)
+      }, 1500)
       //(проигрыш) иначе выпадет notBetCoin, т.е. оставшаяся сторона 
     } else {
-
-      setTimeout(function () {
-        coinEl.style.animation = `rotate-to-${notBetCoin} 2s forwards`
-      }, 100)
+        setTimeout(function () {
+            // coinEl.style.animation = `rotate-to-${betCoin} 1.5s ease-out forwards`
+            coinEl.classList.add(`rotateTo${notBetCoin}`)
+          }, 100)
       // после окончания анимации все используемые переменные возвращаются к исходным значениям
       setTimeout(function () {
         restartGame()
         giveColourBtn()
-      }, 2000)
+      }, 1500)
     }
 
     setTimeout(function () {
         betEl.style.pointerEvents = 'auto'
         giveColourBtn()
-      }, 2000)
+      }, 1500)
 }
 // удалениие оверлея через 2.5 сек
 function cleanOverlay() {
