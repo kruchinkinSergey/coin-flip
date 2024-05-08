@@ -427,68 +427,6 @@ body{
     font-weight: normal;
 }
 
-.history-game{
-    width: 100%;
-    background: #1B1B1B;
-    margin-top: 60px;
-    border-radius: 10px;
-    padding: 0 90px;
-}
-
-.history-game__title{
-    text-align: center;
-    font-size: 36px;
-    padding: 42px 0 52px;
-}
-
-.history-game__table {
-    border-collapse: collapse;
-    width: 100%;
-}
-  
-.history-game__header{
-    border-bottom: 1px solid #fff;
-}
-
-.history-game__table th{
-    font-size: 18px;
-    padding-bottom: 20px; 
-}
-
-.history-game__header-player,
-.history-game__content-player{
-    text-align: left;
-}
-
-.history-game__header-bet,
-.history-game__content-bet,
-.history-game__header-hit,
-.history-game__content-hit,
-.history-game__header-ratio,
-.history-game__content-ratio{
-    text-align: center;
-}
-
-.history-game__header-win,
-.history-game__content-win{
-    text-align: right;
-}
-
-.history-game__table td {
-    font-size: 16px;
-    padding-top: 30px;
-}
-
-.history-game__content-player{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 10px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
 @media (max-width: 1050px) {
     .container{
         min-width: 900px;
@@ -1188,34 +1126,6 @@ body{
 
     .history__item-text{
         font-size: 7px;
-    }
-    .history-game{
-        width: 100%;
-        padding: 21px 21px 40px;
-    }
-    .history-game__title{
-        font-size: 17px;
-        padding: 21px 0 22px;
-    }
-    .history-game__header-ratio,
-    .history-game__content-ratio{
-        display: none;
-    }
-    .history-game__table th {
-        font-size: 10px;
-        padding-bottom: 9px;
-        font-weight: light;
-    }
-    .history-game__table td {
-        font-size: 8px;
-        padding-top: 20px;
-    }
-    .history-game__header-win,
-    .history-game__content-win{
-        text-align: center;
-    }
-    .history-game__content-player-img{
-        width: 24px;
     }
 }
 

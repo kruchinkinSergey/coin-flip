@@ -28,20 +28,7 @@ let isLoss = false
 
 // валидация инпута
 betInput.addEventListener('input', function() {
-    this.value = this.value.replace(/[^0-9.]/g, ''); 
-    
-    if (this.value.includes('.')) {
-        const parts = this.value.split('.');
-
-        if (parts[1].length > 2) {
-            this.value = `${parts[0]}.${parts[1].slice(0, 2)}`;
-        }
-
-    }
-
-    if (this.value === '') {
-        // giveColourBtn()
-    } 
+    this.value = this.value.replace(/[^0-9]/g, ''); 
     //проверка цвета для кнопки
     // giveColourBtn()
 });
@@ -75,13 +62,23 @@ coinBtnArr.forEach((coinBtn) => {
     })
 })
 
-// кнопка 'сделать ход
+// кнопка 'сделать ход'
 betBtn.addEventListener('click', () => {
     const betInputWarning = document.querySelector('.bet__input-warning')
     // проверяем, что инпут не пустой
     if (betInput.value === '') {
         betInputWarning.textContent = 'Сделайте ставку'
         betInputWarning.style.display = 'block'
+        setTimeout(() => {
+            betInputWarning.style.display = 'none'
+        }, 5000)
+    }
+
+    // проверяем, что ставка не меньше 15
+    if (betInput.value < 15) {
+        betInputWarning.textContent = 'Минимальная ставка 15'
+        betInputWarning.style.display = 'block'
+        betInput.value = 15
         setTimeout(() => {
             betInputWarning.style.display = 'none'
         }, 5000)
