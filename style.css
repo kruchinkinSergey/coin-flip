@@ -1,16 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box ;
+    -webkit-box-sizing: border-box ;
+            box-sizing: border-box ;
     font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     min-height: 100vh;
     color: #fff;
     /* background: #6563ff; */
@@ -23,6 +37,8 @@ body{
 }
 
 .coinflip{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /* align-items: center; */
     background-color: #171717;
@@ -30,9 +46,16 @@ body{
 }
 
 .bet{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     background-color: #1E1E1E;
     padding: 38px 66px 38px 36px;
     width: 36%;
@@ -59,6 +82,22 @@ body{
     pointer-events: none;
 }
 
+.bet__input::-webkit-input-placeholder{
+    color: gray;
+}
+
+.bet__input::-moz-placeholder{
+    color: gray;
+}
+
+.bet__input:-ms-input-placeholder{
+    color: gray;
+}
+
+.bet__input::-ms-input-placeholder{
+    color: gray;
+}
+
 .bet__input::placeholder{
     color: gray;
 }
@@ -80,6 +119,8 @@ body{
 }
 
 .coin__btn-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     gap: 6%;
@@ -103,6 +144,8 @@ body{
 }
 
 .bet__btn{
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255,184,1,1)), to(rgba(224,96,18,1)));
+    background: -o-linear-gradient(left, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
     background: linear-gradient(90deg, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
     /* background: gray; */
     border: none;
@@ -117,6 +160,8 @@ body{
 
 .reward__btn{
     display: none;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(224,96,18,1)), to(rgba(255,184,1,1)));
+    background: -o-linear-gradient(left, rgba(224,96,18,1) 0%, rgba(255,184,1,1) 100%);
     background: linear-gradient(90deg, rgba(224,96,18,1) 0%, rgba(255,184,1,1) 100%);
     border: none;
     font-size: 18px;
@@ -140,9 +185,15 @@ body{
 .game__container{
     width: 100%;
     padding: 47px 0 64px 0;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(213,77,0,1)), color-stop(26%, rgba(152,61,9,1)), color-stop(54%, rgba(99,46,16,1)), color-stop(70%, rgba(56,35,23,1)), color-stop(83%, rgba(27,27,27,1)), to(rgba(27,27,27,1)));
+    background: -o-linear-gradient(right, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* justify-content: space-between; */
     margin-bottom: 27px;
     border-radius: 10px;
@@ -157,24 +208,41 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     overflow-x: hidden;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
     transition: 2s;
 }
 
 .overlay__content {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(123,53,14,1)), color-stop(10%, rgba(99,47,18,1)), color-stop(31%, rgba(48,32,23,1)), color-stop(51%, rgba(30,26,24,1)), color-stop(67%, rgba(19,18,18,1)), color-stop(84%, rgba(14,14,13,1)), to(rgba(10,9,8,1)));
+    background: -o-linear-gradient(left, rgba(123,53,14,1) 0%, rgba(99,47,18,1) 10%, rgba(48,32,23,1) 31%, rgba(30,26,24,1) 51%, rgba(19,18,18,1) 67%, rgba(14,14,13,1) 84%, rgba(10,9,8,1) 100%);
     background: linear-gradient(90deg, rgba(123,53,14,1) 0%, rgba(99,47,18,1) 10%, rgba(48,32,23,1) 31%, rgba(30,26,24,1) 51%, rgba(19,18,18,1) 67%, rgba(14,14,13,1) 84%, rgba(10,9,8,1) 100%);
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 300px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 76px 0;
     border-radius: 10px;
 }
@@ -205,14 +273,21 @@ body{
 }
 
 .count{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 60px;
 }
 
 .count__rounds,
 .count__ratio{
     padding: 20px 25px;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(213,77,0,1)), color-stop(26%, rgba(152,61,9,1)), color-stop(54%, rgba(99,46,16,1)), color-stop(70%, rgba(56,35,23,1)), color-stop(83%, rgba(27,27,27,1)), to(rgba(27,27,27,1)));
+    background: -o-linear-gradient(right, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     background: linear-gradient(270deg, rgba(213,77,0,1) 0%, rgba(152,61,9,1) 26%, rgba(99,46,16,1) 54%, rgba(56,35,23,1) 70%, rgba(27,27,27,1) 83%, rgba(27,27,27,1) 100%);
     border-radius: 10px;
 }
@@ -221,6 +296,7 @@ body{
 .count__ratio-num{
     font-size: 25px;
     line-height: 25px;
+    background: -o-linear-gradient(357deg, rgba(255,110,28,1) 0%, rgba(255,184,1,1) 100%);
     background: linear-gradient(93deg, rgba(255,110,28,1) 0%, rgba(255,184,1,1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -236,26 +312,35 @@ body{
 
 .coin__container{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .coin{
     position: relative;
     width: 220px;
     height: 220px;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     /* transition: 2s; */
     /* transform: rotateY(0deg); */
 }
 
 .rotateToReshka {
-    animation: rotate-to-reshka 1.5s ease-out forwards;
+    -webkit-animation: rotate-to-reshka 1.5s ease-out forwards;
+            animation: rotate-to-reshka 1.5s ease-out forwards;
 }
 
 .rotateToOrel{
-    animation: rotate-to-orel 1.5s ease-out forwards;
+    -webkit-animation: rotate-to-orel 1.5s ease-out forwards;
+            animation: rotate-to-orel 1.5s ease-out forwards;
 }
 
 .view{
@@ -263,7 +348,8 @@ body{
     height: 220px;
     position: absolute;
     border-radius: 50%;
-    transform: translateZ(7px);
+    -webkit-transform: translateZ(7px);
+            transform: translateZ(7px);
     background-image: url('./img/big-orel.png');
     background-size: cover;
 }
@@ -271,34 +357,63 @@ body{
 .reshka__view{
     --direction: -1;
     background-image: url("./img/big-reshka.png");
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+
+@-webkit-keyframes rotate-to-reshka {
+    to{
+        -webkit-transform: rotateY(1278deg);
+                transform: rotateY(1278deg);
+    }
 }
 
 
 @keyframes rotate-to-reshka {
     to{
-        transform: rotateY(1278deg);
+        -webkit-transform: rotateY(1278deg);
+                transform: rotateY(1278deg);
+    }
+}
+
+@-webkit-keyframes rotate-to-orel {
+    to{
+        -webkit-transform: rotateY(1100deg);
+                transform: rotateY(1100deg);
     }
 }
 
 @keyframes rotate-to-orel {
     to{
-        transform: rotateY(1100deg);
+        -webkit-transform: rotateY(1100deg);
+                transform: rotateY(1100deg);
     }
 }
 
 .history{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 17px 14px 17px 18px;
     border: 1px solid #FF6E1C;
     border-radius: 10px;
 }
 
 .history__item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     gap: 8px;
 }
@@ -365,9 +480,13 @@ body{
 }
 
 .history-game__content-player{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 @media (max-width: 1050px) {
@@ -419,6 +538,8 @@ body{
     }
     
     .bet__btn{
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255,184,1,1)), to(rgba(224,96,18,1)));
+        background: -o-linear-gradient(left, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         background: linear-gradient(90deg, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         /* background: gray; */
         font-size: 16px;
@@ -551,6 +672,8 @@ body{
     }
     
     .bet__btn{
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255,184,1,1)), to(rgba(224,96,18,1)));
+        background: -o-linear-gradient(left, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         background: linear-gradient(90deg, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         /* background: gray; */
         font-size: 14px;
@@ -683,6 +806,8 @@ body{
     }
     
     .bet__btn{
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255,184,1,1)), to(rgba(224,96,18,1)));
+        background: -o-linear-gradient(left, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         background: linear-gradient(90deg, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         /* background: gray; */
         font-size: 12px;
@@ -815,6 +940,8 @@ body{
     }
     
     .bet__btn{
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255,184,1,1)), to(rgba(224,96,18,1)));
+        background: -o-linear-gradient(left, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         background: linear-gradient(90deg, rgba(255,184,1,1) 0%, rgba(224,96,18,1) 100%);
         /* background: gray; */
         font-size: 12px;
@@ -905,7 +1032,10 @@ body{
     }
     
     .coinflip{
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
         gap: 27px;
     }
     
@@ -975,6 +1105,8 @@ body{
 
     .game__container{
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 40px 0 40px 0;
         margin-bottom: 27px;
