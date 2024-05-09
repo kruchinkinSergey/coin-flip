@@ -129,7 +129,7 @@ function rotateCoin(betCoin, notBetCoin, cntRounds){
       setTimeout(function () {
         // giveColourBtn()
         // награда, которую пользователь выыиграл
-        let reward = betInput.value * countRatioNumEl.textContent.replace(/[^0-9.]/g, '');
+        let reward = betInput.value * countRatioNumEl.textContent.replace(/[^0-9]/g, '');
         // появление кнопки, чтобы награду можно было забрать
         rewardBtn.style.display = 'block'
         rewardBtn.textContent = `Забрать ${reward}`
@@ -199,8 +199,8 @@ function cleanOverlay() {
 // функция возвращает вероятность
 function getProbability(numberMove) {
     const probability = {
-        '1': 0.4,
-        '2': 0.35,
+        '1': 0.37,
+        '2': 0.33,
         '3': 0.3,
         '4': 0.2,
         '5': 0.0,

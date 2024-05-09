@@ -364,30 +364,30 @@ body{
 
 @-webkit-keyframes rotate-to-reshka {
     to{
-        -webkit-transform: rotateY(1278deg);
-                transform: rotateY(1278deg);
+        -webkit-transform: rotateY(1260deg);
+                transform: rotateY(1260deg);
     }
 }
 
 
 @keyframes rotate-to-reshka {
     to{
-        -webkit-transform: rotateY(1278deg);
-                transform: rotateY(1278deg);
+        -webkit-transform: rotateY(1260deg);
+                transform: rotateY(1260deg);
     }
 }
 
 @-webkit-keyframes rotate-to-orel {
     to{
-        -webkit-transform: rotateY(1100deg);
-                transform: rotateY(1100deg);
+        -webkit-transform: rotateY(1080deg);
+                transform: rotateY(1080deg);
     }
 }
 
 @keyframes rotate-to-orel {
     to{
-        -webkit-transform: rotateY(1100deg);
-                transform: rotateY(1100deg);
+        -webkit-transform: rotateY(1080deg);
+                transform: rotateY(1080deg);
     }
 }
 
@@ -980,7 +980,7 @@ body{
     .bet{
         padding: 18px 28px 24px 28px;
         width: 100%;
-        height: 315px;
+        height: 350px;
     }
 
     .bet__title{
@@ -991,7 +991,7 @@ body{
     }
 
     .bet__input{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding: 9px 13px;
         font-size: 12px;
     }
@@ -1015,7 +1015,7 @@ body{
     }
 
     .coin__btn{
-        padding: 8px 0;
+        padding: 18px 0px;
     }
 
     .coin__img{
