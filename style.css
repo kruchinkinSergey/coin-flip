@@ -992,7 +992,7 @@ body{
 
     .bet__input{
         margin-bottom: 30px;
-        padding: 9px 13px;
+        padding: 10px 13px;
         font-size: 12px;
     }
 
@@ -1020,6 +1020,7 @@ body{
 
     .coin__img{
         width: 50px;
+        height: 50px;
     }
 
     .coin__text{
@@ -1051,9 +1052,10 @@ body{
     }
 
     .overlay__content {
-        width: 43vw;
+        width: 200px;
         gap: 15px;
         padding: 26px 0;
+        left: 66%;
     }
     
     .overlay__ratio{
@@ -1131,13 +1133,16 @@ body{
 
 @media (max-width: 380px) {
     .overlay__content {
-        width: 70vw;
+        width: 170px;
         gap: 15px;
         padding: 26px 0;
     }
-    .history-game__header-hit,
-    .history-game__content-hit{
-        display: none;
+    .overlay__ratio{
+        font-size: 26px;
+        color: #FF6E1C;
+    }
+    .overlay__reward{
+        font-size: 12px;
     }
 }
 
@@ -1171,5 +1176,10 @@ body{
     .count__ratio-text {
         font-size: 9px;
         line-height: 9px;
+    }
+    .overlay__content {
+        width: 150px;
+        gap: 15px;
+        padding: 26px 0;
     }
 }
