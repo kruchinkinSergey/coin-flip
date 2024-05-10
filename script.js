@@ -199,9 +199,9 @@ function cleanOverlay() {
 // функция возвращает вероятность
 function getProbability(numberMove) {
     const probability = {
-        '1': 0.37,
-        '2': 0.33,
-        '3': 0.3,
+        '1': 0.3,
+        '2': 0.27,
+        '3': 0.25,
         '4': 0.2,
         '5': 0.0,
         '6': 0.0,
