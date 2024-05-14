@@ -26,6 +26,10 @@ countRoundsNumEl.textContent = '1'
 countRatioNumEl.textContent = `x2`
 let isLoss = false
 
+function playAudio(url) {
+    new Audio(url).play();
+}
+
 // валидация инпута
 betInput.addEventListener('input', function() {
     this.value = this.value.replace(/[^0-9]/g, ''); 
@@ -213,6 +217,7 @@ function getProbability(numberMove) {
 
     return probability[numberMove]
 }
+
 // показывает и обновляет счетчик раундов
 function incrementRound(cntRound) {
     if (countRoundsNumEl.textContent <= 10) countRoundsNumEl.textContent = cntRound
