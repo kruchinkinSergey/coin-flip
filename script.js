@@ -26,9 +26,14 @@ countRoundsNumEl.textContent = '1'
 countRatioNumEl.textContent = `x2`
 let isLoss = false
 
-function playAudio(url) {
-    new Audio(url).play();
+const audio = new Audio();
+audio.src = './audio/sound.mp3';
+audio.preload = 'auto';
+
+function playAudio() {
+    audio.play();
 }
+
 
 // валидация инпута
 betInput.addEventListener('input', function() {
@@ -102,7 +107,7 @@ betBtn.addEventListener('click', () => {
         // giveColourBtn()
         // запускает анимацию
         rotateCoin(betCoin, notBetCoin, cntRounds)
-        
+        playAudio()
     }
 
 })
